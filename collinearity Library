@@ -1,1 +1,9 @@
 
+Introduction
+This library implements some function for removing collinearity from a dataset of features. It can be used both for supervised and for unsupervised machine learning problems.
+
+Collinearity is evaluated calculating Pearson's linear correlation coefficient between the features. The user sets a threshold, which is the maximum absolute value allowed for the correlation coefficients in the correlation matrix.
+
+For unsupervised problems, the algorithm selects only those features that produce a correlation matrix whose off-diagonal elements are, in absolute value, less than the threshold.
+
+For supervised problems, the importance of the features with respect to the target variable is calculated using a univariate approach. Then, the features are added with the same unsupervised approach, starting from the most important ones.
